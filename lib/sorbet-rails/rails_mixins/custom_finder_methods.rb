@@ -27,12 +27,13 @@ module SorbetRails
       find_by!(id: id)
     end
 
+    # mharris
     # where.missing is only available in Rails 6.1 and above
-    if Rails.version >= "6.1"
+    #if Rails.version >= "6.1"
       # https://api.rubyonrails.org/v6.1.4/classes/ActiveRecord/QueryMethods/WhereChain.html#method-i-missing
-      def where_missing(*args)
-        where.missing(*args)
-      end
+    def where_missing(*args)
+      where.missing(*args)
     end
+    #end
   end
 end
